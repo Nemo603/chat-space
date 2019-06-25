@@ -24,7 +24,29 @@
     &__test-user{
       font-size:16px;
       color:#ffffff;
-
+      font-weight:bold;
+      font-size:20px;
+      padding-top:30px;
+    &__test-group{
+      font-size:20px;
+      color:red;
+      padding-top:50px;
+    }
+    &__sample{
+      color:blue;
+      padding-top:15px;
+      font-weight:bold;
+    }
+    &__hello{
+      color:yellow;
+    }
+    &__example{
+      color:green;
+      font-size:bold;
+    }
+    &__message{
+      color:pink;
+    }
     }
   }
 
@@ -33,17 +55,27 @@
     float:right;
     width:calc(100vw - 420px);
     padding:0 40px;
+    position:relative;
     &__text-group{
       font-size:20px;
       color:#333333;
+      padding-top:35px;
+    }
+    &__menber{
+      font-size:15px;
+      color:#999999;
+      padding-top:8px;
     }
     &__edit{
-      float:right;
       width:80px;
-      margin:28px 0;
-      height:10px;
-      font-size:20px;
+      height:40px;
+      font-size:23px;
       padding:0 20px;
+      color:#38AEF0;
+      position: absolute;
+      right:0;
+      top:28px;
+
     }
   }
   &__center{
@@ -52,8 +84,24 @@
     width:calc(100vw - 420px);
     background-color:#fafafa;
     padding:0 40px;
-
+    font-size:20px;
+    &__hello{
+      font-size:15px;
+      color:#999999;
+      padding-top:10px;
+      &__text-user{
+        font-size:16px bold;
+        color:#434A54;
+        padding-top:40px;
+        &__goodbye{
+          font-size:14px;
+          color:#434A54;
+          padding-top:15px;
+        }
+      }
+    }
   }
+
   &__bottom{
     height:60px;
     border-top:15px solid #c0c0c0;

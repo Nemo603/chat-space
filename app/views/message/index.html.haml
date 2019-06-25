@@ -1,6 +1,8 @@
 .header
   .header__logo
     グループを作成しました
+
+
 .contents
   .contents__left
     .contents__left__test-user
@@ -10,23 +12,30 @@
       %p さようなら
     .contents__left__sample
       %p sample-group
-    .contents_left__hello
-      %p hello!
-    .contents_left__example
+      .contents__left__sample__hello
+        %p hello!
+    .contents__left__example
       %p example
-    .contents_left__message
-      %p まだメッセージがありません
+      .contents__left__example__message
+        %p まだメッセージがありません
+
 
   .contents__right
     .contents__right__text-group
       text-group
-    .contents__right__edit
-      edit
+      .contents__right__edit
+        Edit
+    .contents__right__menber
+      menber: Nishimura
+
   .contents__center
     %p test-user
-    %p こんにちは！
-    %p text-user
-    %p さようなら
+    .contents__center__hello
+      %p こんにちは！
+      .contents__center__hello__text-user
+        %p text-user
+        .contents__center__hello__text-user__goodbye
+          %p さようなら
   .contents__bottom
     .contents__bottom__type
       type-c
