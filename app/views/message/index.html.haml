@@ -9,10 +9,10 @@
       .test-user__box
         test user
       .test-user__icon
-        %a{:href => 'http://google.co.jp', :id => 'anchor1' }
+        =link_to "https://www.google.com/?hl=ja",class:"flysite" do
           = fa_icon 'edit'
           %span<> 
-        %a{:href => 'https://fontawesome.com/', :id => 'anchor1'}
+        =link_to "https://fontawesome.com/",class:"flysite" do
           = fa_icon 'cog'
     .test-group
       .test-group__grand

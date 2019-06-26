@@ -30,12 +30,13 @@
       &__box{
         font-weight:bold;
         font-size:20px;
-        padding-right:160px;
+        padding-right:150px;
       }
       &__icon{
         font-size:18px;
-        a{
+        .flysite{
           color:#fff;
+          padding:0 5px;
         }
       }
     }
