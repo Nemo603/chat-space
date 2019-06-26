@@ -98,14 +98,17 @@
       padding-top:8px;
     }
     &__edit{
-      width:80px;
+      width:70px;
       height:40px;
       font-size:23px;
-      padding:0 20px;
+      margin:0 20px;
       color:#38AEF0;
       position: absolute;
       right:0;
       top:28px;
+      border:1px solid #38AEF0;
+      text-align:center;
+
     }
   }
   &__center{
