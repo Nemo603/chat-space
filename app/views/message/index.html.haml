@@ -8,6 +8,12 @@
     .test-user
       .test-user__box
         test user
+      .test-user__icon
+        %a{:href => 'http://google.co.jp', :id => 'anchor1' }
+          = fa_icon 'edit'
+          %span<> 
+        %a{:href => 'https://fontawesome.com/', :id => 'anchor1'}
+          = fa_icon 'cog'
     .test-group
       .test-group__grand
         test group
@@ -44,5 +50,9 @@
   .contents__bottom
     .contents__bottom__type
       type-c
-      .contents__bottom__type__send
-        Send
+    .contents__bottom__image
+      = fa_icon 'image'
+    .contents__bottom__send
+      Send
+
+

@@ -26,9 +26,17 @@
     .test-user{
       padding:35px 0 15px 0 ;
       height:50px;
+      display:flex;
       &__box{
         font-weight:bold;
         font-size:20px;
+        padding-right:160px;
+      }
+      &__icon{
+        font-size:18px;
+        a{
+          color:#fff;
+        }
       }
     }
     .test-group{
@@ -131,23 +139,32 @@
     float:right;
     width:calc(100vw - 420px);
     padding:0 40px;
+    display:flex;
     &__type{
     font-size:16px;
     padding-left:10px;
     color:#434A54;
     line-height: 60px;
     background-color:#fff;
-      &__send{
-        background-color: #38AEF0;
-        font-size: 20px;
-        float: right;
-        height: 60px;
-        width: 100px;
-        text-align: center;
-        line-height: 60px;
-        color: #fff;
-        margin:0 0 0 15px;
-      }
+    width:calc(100vw - 420px);
+    display:flex;
+    }
+    &__image{
+      font-size:25px;
+      color:black;
+      background-color:#fff;
+      line-height:55px;
+      padding-right:10px;
+    }
+    &__send{
+      background-color: #38AEF0;
+      font-size: 20px;
+      float: right;
+      height: 60px;
+      width: 120px;
+      text-align: center;
+      line-height:55px;
+      color:#fff;
     }
   }
 }
