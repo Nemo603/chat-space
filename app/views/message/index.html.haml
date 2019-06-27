@@ -1,0 +1,58 @@
+.header
+  .header__logo
+    グループを作成しました
+
+
+.contents
+  .contents__left
+    .test-user
+      .test-user__box
+        test user
+      .test-user__icon
+        =link_to "https://www.google.com/?hl=ja",class:"flysite" do
+          = fa_icon 'edit'
+          %span<> 
+        =link_to "https://fontawesome.com/",class:"flysite" do
+          = fa_icon 'cog'
+    .test-group
+      .test-group__grand
+        test group
+      .test-group__goodbye
+        さようなら
+    .sample-group
+      .sample-group__group
+        sample-group
+      .sample-group__hello
+        hello!
+    .example
+      .example__text
+        example
+      .example__message
+        まだメッセージがありません
+
+
+  .contents__right
+    .contents__right__text-group
+      text-group
+      .contents__right__edit
+        Edit
+    .contents__right__menber
+      menber: Nishimura
+
+  .contents__center
+    %p test-user
+    .contents__center__hello
+      %p こんにちは！
+      .contents__center__hello__text-user
+        %p text-user
+        .contents__center__hello__text-user__goodbye
+          %p さようなら
+  .contents__bottom
+    .contents__bottom__type
+      type-c
+    .contents__bottom__image
+      = fa_icon 'image'
+    .contents__bottom__send
+      Send
+
+
