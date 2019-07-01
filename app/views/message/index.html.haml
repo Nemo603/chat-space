@@ -9,33 +9,23 @@
       .test-user__box
         test user
       .test-user__icon
-        =link_to "https://www.google.com/?hl=ja",class:"flysite" do
+        =link_to "groups/new",class:"flysite" do
           = fa_icon 'edit'
           %span<> 
-        =link_to "https://fontawesome.com/",class:"flysite" do
+        =link_to "groups/edit",class:"flysite" do
           = fa_icon 'cog'
-    .test-group
-      .test-group__grand
-        test group
-      .test-group__goodbye
-        さようなら
-    .sample-group
-      .sample-group__group
-        sample-group
-      .sample-group__hello
-        hello!
-    .example
-      .example__text
-        example
-      .example__message
-        まだメッセージがありません
+    .wrapper
+      = render partial: 'shared/side_bar'
+
 
 
   .contents__right
     .contents__right__text-group
       text-group
       .contents__right__edit
-        Edit
+        =link_to "groups/edit",class:"flysite" do
+          Edit
+
     .contents__right__menber
       menber: Nishimura
 
