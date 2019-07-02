@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root 'message#index'
   get 'groups/edit'
   patch 'groups/update'
+  post 'groups/update'
 
   resources :users, only: [:index, :edit, :update] 
   resources :groups, only: [:new, :create, :edit, :update ] do
