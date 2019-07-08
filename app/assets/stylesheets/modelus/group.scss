@@ -1,3 +1,14 @@
+.headers{
+  height:30px;
+  background-color:#38AEF0;
+  color:#fff;
+  &__logo{
+    text-align:center;
+    font-size:20px;
+  }
+}
+
+
 .chat-group-form {
   width: 980px;
   margin: 60px auto;

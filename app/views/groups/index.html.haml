@@ -1,0 +1,16 @@
+.headers
+  .headers__logo
+    -# グループを作成しました
+.contents
+  .contents__left
+    .test-user
+      .test-user__box
+        =current_user.name
+      .test-user__icon
+        =link_to "groups/new",class:"flysite" do
+          = fa_icon 'edit'
+          %span<> 
+        =link_to edit_user_path(current_user),class:"flysite" do
+          = fa_icon 'cog'
+    .wrapper
+      = render partial: 'shared/side_bar'

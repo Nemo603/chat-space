@@ -6,5 +6,10 @@ class User < ApplicationRecord
 
   has_many :messages
   has_many :members
+  has_many :messages
   has_many :groups, through: :members
+
+  def current_user
+    "#{current.user[:id]}"
+  end
 end
