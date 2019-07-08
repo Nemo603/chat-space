@@ -1,19 +1,8 @@
-.header{
-  height:30px;
-  background-color:#38AEF0;
-  color:#fff;
-  &__logo{
-    text-align:center;
-    font-size:20px;
-  }
-}
-
 .contents{
   height:calc(100vh - 40px);
   background-color:#fff;
   width:100vw;
   margin: auto 0;
-  background-color:#c0c0c0;
   &__left{
     float:left;
     background-color:#2f3e51;
@@ -24,6 +13,7 @@
     display:flex;
     flex-direction:column;
     .test-user{
+      background-color:#3f4f64;
       padding:35px 0 15px 0 ;
       height:50px;
       display:flex;
@@ -31,9 +21,11 @@
         font-weight:bold;
         font-size:20px;
         padding-right:150px;
+        width:200px;
       }
       &__icon{
         font-size:18px;
+        width:100px;
         .flysite{
           color:#fff;
           padding:0 5px;
@@ -41,12 +33,13 @@
       }
     }
     .wrapper{
-      height:calc(100vh - 40px - 50px);
+      // height:calc(100% - 40px - 60px);
       background-color:#2f3e51;
       weight:300px;
       font-size:15px;
       color:#fff;
       padding:10px 0 ;
+      min-height:300px;
       .group__message{
         color:White;
         height:50px;
@@ -96,96 +89,75 @@
         }
       }
     }
+  } 
+.text{
+  height:calc(100vh - 131px);
+  float:right;
+  width:calc(100vw - 420px);
+  padding:0 40px;
+  position:relative;
+  background-color:#fff;
+  border-bottom:1px solid #c0c0c0;
+  .group{
+    font-size:18px;
+    color:#333333;
+    height:53px;
+  }
+  .edit{
+    width:70px;
+    height:40px;
+    font-size:23px;
+    margin:0 20px;
+    color:#38AEF0;
+    position: absolute;
+    right:50px;
+    top:10px;
+    border:1px solid #38AEF0;
+    text-align:center;
+    line-height:40px;
+  }
+  .member{
+    color: #999999;
+    font-size:12px;
+  }.messages {
+  background-color: #FAFAFA;
+  box-sizing: border-box;
+  padding: 46px 40px 0;
+  height: calc(100% - 100px - 90px);
 
-    &__right{
-      height:96px;
-      float:right;
-      width:calc(100vw - 420px);
-      padding:0 40px;
-      position:relative;
-      background-color:#fff;
-      border-bottom:1px solid #c0c0c0;
-      &__text-group{
-        font-size:20px;
-        color:#333333;
-        padding-top:35px;
+}
+
+}
+.center{
+  float:right;
+  height: calc(100vh - 132px - 70px);
+  width:calc(100vw - 420px);
+  background-color:rgb(243, 241, 239);
+  font-size:20px;
+  .message {
+    .upper-message {
+      display: flex;
+      
+      &__user-name {
+        color: black;
+        font-size: 16px;
+        font-weight: bold;
       }
-      &__menber{
-        font-size:15px;
-        color:#999999;
-        padding-top:8px;
-      }
-      &__edit{
-        width:70px;
-        height:40px;
-        font-size:23px;
-        margin:0 20px;
-        color:#38AEF0;
-        position: absolute;
-        right:0;
-        top:28px;
-        border:1px solid #38AEF0;
-        text-align:center;
-        line-height:40px;
+      &__date {
+        color:lightgray;
+        font-size: 12px;
+        padding-left: 10px;
       }
     }
-    &__center{
-      height: calc(100% - 96px - 90px);
-      float:right;
-      width:calc(100vw - 420px);
-      background-color:#fafafa;
-      padding:0 40px;
-      font-size:20px;
-      &__hello{
-        font-size:15px;
-        color:#999999;
-        padding-top:10px;
-        &__text-user{
-          font-size:16px bold;
-          color:#434A54;
-          padding-top:40px;
-          &__goodbye{
-            font-size:14px;
-            color:#434A54;
-            padding-top:15px;
-          }
-        }
-      }
-    }
-
-    &__bottom{
-      height:60px;
-      border-top:15px solid #c0c0c0;
-      border-bottom:15px solid #c0c0c0;
-      float:right;
-      width:calc(100vw - 420px);
-      padding:0 40px;
-      display:flex;
-      &__type{
-      font-size:16px;
-      padding-left:10px;
-      color:#434A54;
-      line-height: 60px;
-      background-color:#fff;
-      width:calc(100vw - 420px);
-      display:flex;
-      }
-      &__image{
-        font-size:25px;
+    .lower-message {
+      margin-top: 10px;
+      &__content {
         color:black;
-        background-color:#fff;
-        line-height:55px;
-        padding-right:10px;
-      }
-      &__send{
-        background-color: #38AEF0;
-        font-size: 20px;
-        float: right;
-        height: 60px;
-        width: 120px;
-        text-align: center;
-        line-height:55px;
-        color:#fff;
+        font-size: 14px;
+        margin-bottom: 40px;
       }
     }
   }
+
+}
+
