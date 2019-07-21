@@ -96,12 +96,16 @@
   width:calc(100vw - 420px);
   padding:0 40px;
   position:relative;
-  background-color:#fff;
+  background-color:rgb(243, 241, 239);
   border-bottom:1px solid #c0c0c0;
+  overflow: auto;
   .group{
     font-size:18px;
     color:#333333;
     height:53px;
+    background-color:#fff;
+    margin:0 -40px;
+
   }
   .edit{
     width:70px;
@@ -119,6 +123,9 @@
   .member{
     color: #999999;
     font-size:12px;
+    background-color:#fff;
+    border-bottom:1px solid black;
+    margin:0 -40px;
   }.messages {
   background-color: #FAFAFA;
   box-sizing: border-box;
