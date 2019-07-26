@@ -3,8 +3,8 @@ $(function(){
     function bulidMessage(message){
 
 
-      var image
-      message.image === null ? image = '' : image = `<img src="${message.image}" alt="画像">`
+      
+      var image = message.image === null ? image = '' : image = `<img src="${message.image}" alt="画像">`
 
       var html = `  <div class="message">
                       <div class="upper-message">
