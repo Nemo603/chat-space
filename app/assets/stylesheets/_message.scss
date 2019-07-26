@@ -35,11 +35,12 @@
     .wrapper{
       // height:calc(100% - 40px - 60px);
       background-color:#2f3e51;
-      weight:300px;
+      width:300px;
       font-size:15px;
       color:#fff;
       padding:10px 0 ;
       min-height:300px;
+      overflow: auto;
       .group__message{
         color:White;
         height:50px;
@@ -141,6 +142,7 @@
   width:calc(100vw - 420px);
   background-color:rgb(243, 241, 239);
   font-size:20px;
+  position:relative;
   .message {
     .upper-message {
       display: flex;
