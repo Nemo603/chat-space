@@ -4,12 +4,7 @@ $(function(){
 
 
       var image
-      if (message.image != null) {  //imageがnull じゃ無い場合
-        image = `<img src="${message.image}" alt="画像">`
-      }else{
-        image = ''
-      }
-      // 三項演算子
+      message.image === null ? image = '' : image = `<img src="${message.image}" alt="画像">`
 
       var html = `  <div class="message">
                       <div class="upper-message">
@@ -43,15 +38,15 @@ $(function(){
           processData: false,
           contentType: false
         })
-        .done(function(message){
-          var html = bulidMessage(message);
-          $('.center-text').append(html);
-          $('.form__message').val('');
-          var height = $('.text')[0].scrollHeight;
-          $('.text').animate({scrollTop:height});
-          
-          
+      .done(function(message){
+        var html = bulidMessage(message);
+        $('.center-text').append(html);
+        $('#new_message')[0].reset();
+        var height = $('.text')[0].scrollHeight;
+        $('.text').animate({scrollTop:height});
         
+        
+      
       })
       .fail(function(){
         alert('送信が失敗しました');
