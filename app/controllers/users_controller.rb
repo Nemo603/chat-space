@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-  # before_action :user_params, only: [:edit,:update]
   before_action :authenticate_user!, only: :index
 
   def index
