@@ -15,7 +15,8 @@
   .text
     .text__group
       .group
-        text-group  
+        .group__name
+          = @group.name
       .member
         現在ログイン中：
         = current_user.name
