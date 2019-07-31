@@ -39,7 +39,7 @@ $(function(){
     })
   .done(function(message){
     var html = bulidMessage(message);
-    $('.message').append(html);
+    $('.center-text').append(html);
     $('#new_message')[0].reset();
     var height = $('.text')[0].scrollHeight;
     $('.text').animate({scrollTop:height});
@@ -54,33 +54,40 @@ $(function(){
   }); 
 
     var reloadMessages = setInterval (function() {
+      
     if (window.location.href.match(/\/groups\/\d+\/messages/)){
       //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得
-      var last_message_id = $('.center-text').last().data('id')
-      var href = 'api/messages'
+      var last_message_id = $('.message').last().data('id')
+      var group_id = $('.text').data('id')
       $.ajax({
         //ルーティングで設定した通りのURLを指定
-        url: window.location.href,
+        url: `/groups/${group_id}/api/messages`,
         //ルーティングで設定した通りhttpメソッドをgetに指定
-        type: 'get',
+        type: 'GET',
         dataType: 'json',
-        //dataオプションでリクエストに値を含める
-        data: {id: last_message_id}  //formDataじゃないのでPresentDataなどがいらない
+        //dataオプションでリクエストに値を含める,
+        data: {id: last_message_id}  //formDataじゃないのでPresentDataなどがいらな
       })
       .done(function(messages) {
-          var message = messages.slice(-1)[0];
+        console.log(messages)
+        messages.forEach(function(message){
+          // var message = messages.slice(-1)[0];
           var html = bulidMessage(message);
           $('.center-text').append(html);
           $('#new_message')[0].reset();
           var height = $('.text')[0].scrollHeight;
           $('.text').animate({scrollTop:height});
       })
+      })
+      
       .fail(function() {
         alert("自動更新に失敗しました");
       });
       }
+      
         clearInterval(reloadMessages);
   }, 10000 );
+  
 
   })
   
