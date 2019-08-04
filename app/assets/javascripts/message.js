@@ -70,13 +70,14 @@ $(function(){
       })
       .done(function(messages) {
         console.log(messages)
-        messages.forEach(function(message){
+        messages.forEach(function(messages){
           // var message = messages.slice(-1)[0];
-          var html = bulidMessage(message);
+          var html = bulidMessage(messages);
           $('.center-text').append(html);
           $('#new_message')[0].reset();
           var height = $('.text')[0].scrollHeight;
           $('.text').animate({scrollTop:height});
+          console.log(messages)
       })
       })
       
