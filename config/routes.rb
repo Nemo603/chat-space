@@ -5,6 +5,10 @@ Rails.application.routes.draw do
   resources :groups, only: [:new, :create, :edit, :update ] do
     resources :messages, only: [:index, :create]
     
+    namespace :api do
+      resources :messages, only: :index, defaults: { format: 'json' }
+    end
+    # defaultsでformatを常にjsonである様に設定している
   end
 end
 

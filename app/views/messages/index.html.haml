@@ -12,7 +12,7 @@
     .wrapper
       = render partial: 'shared/side_bar'
 
-  .text
+  .text(data-id= "#{@group.id}")
     .text__group
       .group
         .group__name
@@ -28,7 +28,7 @@
     .center
       .center-text
         = render @messages
-  .message
+  .message-send
     = render partial: 'messages/send' 
 
 
