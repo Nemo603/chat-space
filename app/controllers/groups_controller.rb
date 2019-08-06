@@ -6,12 +6,13 @@ class GroupsController < ApplicationController
 
   def new
     @group = Group.new
-    @group.user_ids = [current_user.id]
+    @group.users << current_user
   end
 
   def create
     @group = Group.new(group_params)
     if @group.save
+      @group.users << current_user
       redirect_to root_path, notice: 'グループを作成しました'
     else
       render :new
