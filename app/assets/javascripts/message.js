@@ -69,7 +69,6 @@ $(function(){
         data: {id: last_message_id}  //formDataじゃないのでPresentDataなどがいらな
       })
       .done(function(messages) {
-        console.log(messages)
         messages.forEach(function(messages){
           // var message = messages.slice(-1)[0];
           var html = bulidMessage(messages);
@@ -77,7 +76,6 @@ $(function(){
           $('#new_message')[0].reset();
           var height = $('.text')[0].scrollHeight;
           $('.text').animate({scrollTop:height});
-          console.log(messages)
       })
       })
       
@@ -85,9 +83,7 @@ $(function(){
         alert("自動更新に失敗しました");
       });
       }
-      
-        clearInterval(reloadMessages);
-  }, 10000 );
+  }, 5000 );
   
 
   })
