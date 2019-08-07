@@ -6,7 +6,7 @@ class GroupsController < ApplicationController
 
   def new
     @group = Group.new
-    @group.user_ids = [current_user.id]
+    @group.users << current_user
   end
 
   def create
