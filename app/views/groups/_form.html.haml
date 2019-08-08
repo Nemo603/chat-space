@@ -22,7 +22,7 @@
 
     .chat-group-form__field.clearfix
       .chat-group-form__field--left
-        = f.label :name,"チャットメンバー",class: "chat-group-form__label"
+        %label.chat-group-form__label{for: "menbers"} チャットメンバー
       .chat-group-fozrm__field--right
         #chat-group-users
           .chat-group-user.clearfix
