@@ -14,8 +14,10 @@ default: &default
   encoding: utf8
   pool: 5
   username: root
-  password:
+  password: 
+  # database_local_password: Rails.application.local_database_access_key
   socket: /tmp/mysql.sock
+  # 今 nemotrace がpassword
 
 development:
   <<: *default
@@ -52,8 +54,4 @@ production:
   database: chat-space_production
   username: root
   password: <%= ENV['DATABASE_PASSWORD'] %>
-  socket: /var/lib/mysql/mysql.sock
-
-
-  # username: chat-space
-  # password: <%= ENV['CHAT-SPACE_DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock 
