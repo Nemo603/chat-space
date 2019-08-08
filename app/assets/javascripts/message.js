@@ -68,26 +68,27 @@ $(function(){
         //dataオプションでリクエストに値を含める,
         data: {id: last_message_id}  //formDataじゃないのでPresentDataなどがいらな
       })
-      .done(function(messages) {
-        console.log(messages)
-        messages.forEach(function(messages){
+      .done(function(new_messages) {
+        new_messages.forEach(function(new_messages){
           // var message = messages.slice(-1)[0];
-          var html = bulidMessage(messages);
+          var html = bulidMessage(new_messages);
           $('.center-text').append(html);
           $('#new_message')[0].reset();
           var height = $('.text')[0].scrollHeight;
           $('.text').animate({scrollTop:height});
-          console.log(messages)
       })
       })
       
       .fail(function() {
         alert("自動更新に失敗しました");
       });
+
+      }else{clearInterval(reloadMessages);
       }
       
-        clearInterval(reloadMessages);
+        
   }, 10000 );
+  
   
 
   })
