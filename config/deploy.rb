@@ -14,7 +14,7 @@ set :rbenv_ruby, '2.5.1'
 
 # どの公開鍵を利用してデプロイするか
 set :ssh_options, auth_methods: ['publickey'],
-keys: ['ssh -i NemoTrace.pem']
+keys: ['~/.ssh/nemotrace.pem']
 
 
 # プロセス番号を記載したファイルの場所
