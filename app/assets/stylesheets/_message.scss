@@ -1,5 +1,5 @@
 .contents{
-  height:calc(100vh - 40px);
+  // height:100%;
   background-color:#fff;
   width:100vw;
   margin: auto 0;
@@ -17,6 +17,7 @@
       padding:35px 0 15px 0 ;
       height:50px;
       display:flex;
+      margin: 0 -20px;
       &__box{
         font-weight:bold;
         font-size:20px;
@@ -40,14 +41,16 @@
       color:#fff;
       padding:10px 0 ;
       min-height:300px;
-      overflow: auto;
+      
       .group__message{
         color:White;
         height:50px;
+        font-size: 8px;
       }
       .group__name{
         color:white;
         height:30px;
+        font-size:20px;
       }
     }
 
@@ -103,29 +106,33 @@
   .group{
     font-size:18px;
     color:#333333;
-    height:53px;
+    height:55px;
     background-color:#fff;
     margin:0 -40px;
-
+    padding-top:25px;
+    padding-left:30px;
+    font-size:25px;
   }
   .edit{
-    width:70px;
+    width:80px;
     height:40px;
-    font-size:23px;
-    margin:0 20px;
+    font-size:20px;
+    margin:20px 30px;
     color:#38AEF0;
-    position: absolute;
+    display:flex;
     right:50px;
     top:10px;
     border:1px solid #38AEF0;
     text-align:center;
     line-height:40px;
+    
   }
   .member{
     color: #999999;
     font-size:12px;
     background-color:#fff;
-    border-bottom:1px solid black;
+    padding-left:30px;
+    // border-bottom:1px solid gray;
     margin:0 -40px;
   }.messages {
   background-color: #FAFAFA;
@@ -143,6 +150,7 @@
   background-color:rgb(243, 241, 239);
   font-size:20px;
   position:relative;
+  overflow: auto;
   .message {
     .upper-message {
       display: flex;

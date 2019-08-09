@@ -70,3 +70,5 @@ $(document).on('turbolinks:load', function(){
       });
     });
   });
+
+  // push shift

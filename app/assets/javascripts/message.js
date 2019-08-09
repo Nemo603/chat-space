@@ -44,8 +44,6 @@ $(function(){
     var height = $('.text')[0].scrollHeight;
     $('.text').animate({scrollTop:height});
     
-    
-  
   })
   .fail(function(){
     alert('送信が失敗しました');
