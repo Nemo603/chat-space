@@ -8,6 +8,7 @@
   display:flex;
   top:0;
   background-color:#DDDDDD;
+  bottom:0;
   .form {
     background-color: #DDDDDD;
     box-sizing: border-box;
@@ -34,7 +35,7 @@
       }
     }
     &__submit {
-      background-color: lightblue;
+      background-color: rgb(40, 173, 218);
       border: none;
       color: white;
       float: right;
