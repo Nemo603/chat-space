@@ -20,16 +20,23 @@
         %input#user-search-field.chat-group-form__input{:placeholder => "追加したいユーザー名を入力してください", :type => "text"}/
         #user-search-result
 
-    .chat-group-form__field.clearfix
-      .chat-group-form__field--left
-        %label.chat-group-form__label{for: "menbers"} チャットメンバー
-      .chat-group-fozrm__field--right
-        #chat-group-users
-          .chat-group-user.clearfix
-            #chat-group-user-8292.chat-group-user.clearfix.js-chat-member
-              = f.hidden_field :user_ids, name: "group[user_ids][]", value: current_user.id
-              %p.chat-group-user__name
-                = current_user.name
+  .chat-group-form__field.clearfix
+    .chat-group-form__field--left
+      %label.chat-group-form__label{for: "menbers"} チャットメンバー
+    .chat-group-form__field--right
+      #chat-group-users
+        .chat-group-user.clearfix
+          #chat-group-user-8292.chat-group-user.clearfix.js-chat-member
+            = current_user.name
+            = f.hidden_field :user_ids, value: current_user.id, multiple: true
+            - @group.users.each do |member|
+              .chat-group-user
+                = f.hidden_field :user_ids, value: member.id, multiple: true
+                -if member.name != current_user.name
+                  %p.chat-group-user__name
+                    =member.name
+                  %a.user-search-remove.chat-group-user__btn.chat-group-user__btn.chat-group-user__btn--remove.js-remove-btn 消去
+
   
   .chat-group-form__field.clearfix
     .chat-group-form__field--left

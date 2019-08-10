@@ -41,8 +41,8 @@ $(function(){
     var html = bulidMessage(message);
     $('.center-text').append(html);
     $('#new_message')[0].reset();
-    var height = $('.text')[0].scrollHeight;
-    $('.text').animate({scrollTop:height});
+    var height = $('.center')[0].scrollHeight;
+    $('.center').animate({scrollTop:height});
     
   })
   .fail(function(){
@@ -72,11 +72,10 @@ $(function(){
           var html = bulidMessage(new_messages);
           $('.center-text').append(html);
           $('#new_message')[0].reset();
-          var height = $('.text')[0].scrollHeight;
-          $('.text').animate({scrollTop:height});
+          var height = $('.center')[0].scrollHeight;
+          $('.center').animate({scrollTop:height});
       })
       })
-      
       .fail(function() {
         alert("自動更新に失敗しました");
       });

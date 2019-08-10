@@ -17,16 +17,13 @@
       .group
         .group__name
           = @group.name
-      .member
-        現在ログイン中：
-        - @group.users.each do |user|
-          = user.name
-
-
-      .edit
-        =link_to edit_group_path(@group),class:"flysite" do
-          Edit
-
+        .group__member
+          現在ログイン中：
+          - @group.users.each do |user|
+            = user.name
+        .edit
+          =link_to edit_group_path(@group),class:"flysite" do
+            Edit
     .center
       .center-text
         = render @messages

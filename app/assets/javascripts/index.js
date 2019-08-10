@@ -19,14 +19,16 @@ $(document).on('turbolinks:load', function(){
     var member_list = $("#chat-group-users");
   // 追加ユーザーリスト作成
     function addUser(userId,userName) {
-    var html = `<div id='chat-group-users'>
-                  <div class='chat-group-user clearfix js-chat-member' id='${userId}'>
+    
+      var html = `<div class='chat-group-user' id='${userId}'>
                     <input name='group[user_ids][]' type='hidden' value='${userId}'>
                       <p class='chat-group-user__name'>${userName}</p>
                       <a class='user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn'>削除</a>
-                </div>`;
+                  </div>`;
     member_list.append(html);  //viweのmember_listに上のHTMLを出力している
       }
+
+    
   // ユーザー検索
   // イベント発火、keyupメソッド
     $("#user-search-field").on("keyup", function() {
@@ -40,6 +42,7 @@ $(document).on('turbolinks:load', function(){
       // ユーザーの検索に成功
         // 非同期通信の結果をdoneの関数の引数から受け取り、viewに追加するHTMLを作成
       .done(function(users){
+        // console.log(users)
         $("#user-search-result").empty();
         // jbuilderから送られてきた配列の情報によって場合分け、関数呼び出し
         if (users.length !== 0) {
@@ -66,6 +69,8 @@ $(document).on('turbolinks:load', function(){
       });
        // 削除ボタンクリック時の処理
       $(document).on("click", ".user-search-remove", function () {
+        var userId = $(this).data('user-id');
+        var userName = $(this).data('user-name');
         $(this).parent().remove();
       });
     });
