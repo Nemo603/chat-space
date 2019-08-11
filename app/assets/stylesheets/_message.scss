@@ -6,6 +6,7 @@
   &__left{
     float:left;
     
+    
     background-color:#2f3e51;
     width: 300px;
     color:#fff;
@@ -17,7 +18,7 @@
     .test-user{
       background-color:#253141;
       padding:35px 0 15px 0 ;
-      height:50px;
+      height:124px;
       display:flex;
       margin: 0 -20px;
       &__box{
@@ -45,16 +46,18 @@
       color:#fff;
       padding:10px 0 ;
       min-height:300px;
-      
+      overflow:auto;
       .group__message{
         color:White;
         height:50px;
-        font-size: 8px;
+        font-size: 15px;
+        line-height:40px;
       }
       .group__name{
         color:white;
         height:30px;
         font-size:20px;
+        line-height:30px;
       }
     }
 
@@ -105,7 +108,7 @@
   padding:0 40px;
   position:relative;
   background-color:rgb(243, 241, 239);
-  border-bottom:1px solid #c0c0c0;
+  border-bottom:1px solid #eee;
   
   .group{
     color:#333333;
@@ -116,7 +119,7 @@
     
     &__name{
       height:60px;
-      line-height:70px;
+      line-height:95px;
       font-size:25px;
     }
     &__member{
@@ -134,12 +137,15 @@
       position: absolute;
       right:50px;
       top:10px;
-      border:1px solid #38AEF0;
+      border: solid 1px #38aef0;
       text-align:center;
       line-height:40px;
-      
+      &__name{
+        color:#38AEF0;
+      }
     }
   }
+
 
 .messages {
   background-color: #FAFAFA;
