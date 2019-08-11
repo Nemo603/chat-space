@@ -3,12 +3,12 @@
     .test-user
       .test-user__box
         =current_user.name
-      .test-user__icon
-        =link_to new_group_path,class:"flysite" do
-          = fa_icon 'edit'
-          %span<> 
-        =link_to edit_user_path(current_user),class:"flysite" do
-          = fa_icon 'cog'
+        .test-user__box__icon
+          =link_to new_group_path,class:"flysite" do
+            = fa_icon 'edit'
+            %span<> 
+          =link_to edit_user_path(current_user),class:"flysite" do
+            = fa_icon 'cog'
     .wrapper
       = render partial: 'shared/side_bar'
 
