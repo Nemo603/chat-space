@@ -28,7 +28,7 @@
         .chat-group-user.clearfix
           #chat-group-user-8292.chat-group-user.clearfix.js-chat-member
             = current_user.name
-            = f.hidden_field :user_ids, value: current_user.id, multiple: true
+            -# = f.hidden_field :user_ids, value: current_user.id, multiple: true
             - @group.users.each do |member|
               .chat-group-user
                 = f.hidden_field :user_ids, value: member.id, multiple: true

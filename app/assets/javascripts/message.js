@@ -18,37 +18,39 @@ $(function(){
                       <div class="lower-message" >
                         <p class="lower-message__content">
                         ${message.content}
-                        ${image}
                         </p>
-                      
+                        ${image}
                       </div>
                     </div>`;
       return html;
     }
+
   $('#new_message').on('submit',function(e){
     e.preventDefault();
     var formData = new FormData(this);
     var url = $(this).attr('action')
-    $.ajax({
-      url: url,
-      type: "POST",
-      data: formData,
-      dataType: 'json',
-      processData: false,
-      contentType: false
-    })
-  .done(function(message){
-    var html = bulidMessage(message);
-    $('.center-text').append(html);
-    $('#new_message')[0].reset();
-    var height = $('.center')[0].scrollHeight;
-    $('.center').animate({scrollTop:height});
-    
-  })
-  .fail(function(){
-    alert('送信が失敗しました');
-  })
-  return false;  //これで連続で送信ボタンを押せるようにしている
+      $.ajax({
+        url: url,
+        type: "POST",
+        data: formData,
+        dataType: 'json',
+        processData: false,
+        contentType: false
+      })
+      .done(function(message){
+        if (message.id != null){
+        var html = bulidMessage(message);
+        $('.center-text').append(html);
+        $('#new_message')[0].reset();
+        $('.center').animate({scrollTop: $('.center-text')[0].scrollHeight}, 'fast');
+        }else{
+          alert('送信に失敗しました');
+        }
+      })
+      .fail(function(){
+        alert('送信が失敗しました');
+      });
+    return false;//これで連続で送信ボタンを押せるようにしている
   }); 
 
     var reloadMessages = setInterval (function() {
