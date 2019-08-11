@@ -17,8 +17,8 @@
     
     .test-user{
       background-color:#253141;
-      padding:35px 0 15px 0 ;
-      height:60px;
+      padding:35px 0;
+      // height:70px;
       display:flex;
       margin: 0 -20px;
       &__box{
@@ -168,8 +168,6 @@
   .message {
     margin-bottom:40px;
     .upper-message {
-      display: flex;
-      
       &__user-name {
         color: black;
         font-size: 18px;
