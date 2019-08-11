@@ -74,8 +74,7 @@ $(function(){
           var html = bulidMessage(new_messages);
           $('.center-text').append(html);
           $('#new_message')[0].reset();
-          var height = $('.center')[0].scrollHeight;
-          $('.center').animate({scrollTop:height});
+          $('.center').animate({scrollTop: $('.center-text')[0].scrollHeight}, 'fast');
       })
       })
       .fail(function() {
